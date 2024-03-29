@@ -3,9 +3,8 @@ import { Alert, ScrollView, View } from 'react-native';
 import Botao from '../../components/Botao';
 import * as S from './styles';
 import Slider from '@react-native-community/slider';
-import { auth } from '../../config/firebase';
+import { auth, firebaseConfig } from '../../config/firebase';
 import { firebase as remoteConfigFirebase } from '@react-native-firebase/remote-config';
-import { firebaseConfig } from '../../config/firebase';
 import appFirebase from '@react-native-firebase/app';
 import '@react-native-firebase/database';
 
@@ -119,7 +118,7 @@ const SettingsScreen = ({navigation}) => {
   
 
   return (
-    <ScrollView contentContainerStyle={{ padding: 16 }}>
+    <ScrollView contentContainerStyle={{ padding: 20 }}>
       <S.Container accessibilityLabel='Cubo'>
         <S.TextoForma>Cubo</S.TextoForma>
         <S.OptionContainer>

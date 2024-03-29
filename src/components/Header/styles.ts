@@ -7,6 +7,7 @@ export const Container = styled.View`
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin-top: 10px;
 ` 
 
 export const BotaoConfig = styled.TouchableOpacity`
