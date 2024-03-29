@@ -21,62 +21,63 @@ const SettingsScreen = ({navigation}) => {
   });
 
   const authenticated = {firebaseConfig}
+  console.log(authenticated)
 
   useEffect(() => {
-    if (!remoteConfigFirebase.apps.length) {
-      remoteConfigFirebase.initializeApp(authenticated.firebaseConfig);
-    }
+    // if (!remoteConfigFirebase.apps.length) {
+    //   remoteConfigFirebase.initializeApp(authenticated.firebaseConfig);
+    // }
   
-    const fetchRemoteConfig = async () => {
-      try {
-        console.log('Iniciando busca do Remote Config');
-        const remoteConfig = remoteConfigFirebase.remoteConfig();
+    // const fetchRemoteConfig = async () => {
+    //   try {
+    //     console.log('Iniciando busca do Remote Config');
+    //     const remoteConfig = remoteConfigFirebase.remoteConfig();
   
         
-        await remoteConfig.fetch(60000);
+    //     await remoteConfig.fetch(60000);
   
-        await remoteConfig.activate();
+    //     await remoteConfig.activate();
   
-        console.log('Busca do Remote Config concluída');
-        const defaultConfig = remoteConfig.getValue('objeto_config_padrao').asString();
+    //     console.log('Busca do Remote Config concluída');
+    //     const defaultConfig = remoteConfig.getValue('objeto_config_padrao').asString();
         
 
-        const objectsArray = JSON.parse(defaultConfig).defaultConfig.objects;
+    //     const objectsArray = JSON.parse(defaultConfig).defaultConfig.objects;
         
-        setObjects(objectsArray);
-        console.log(objects, objectsArray)
+    //     setObjects(objectsArray);
+    //     console.log(objects, objectsArray)
   
-        setSelectedRotationCubo(objectsArray.find(obj => obj.type === 'Cubo').rotation);
-        setSelectedRotationCone(objectsArray.find(obj => obj.type === 'Cone').rotation);
-        setSelectedRotationDodecaedro(objectsArray.find(obj => obj.type === 'Dodecaedro').rotation);
-        setColors({
-          Cubo: objectsArray.find(obj => obj.type === 'Cubo').color,
-          Cone: objectsArray.find(obj => obj.type === 'Cone').color,
-          Dodecaedro: objectsArray.find(obj => obj.type === 'Dodecaedro').color,
-        });
-      } catch (error) {
-        console.error('Erro ao buscar o Remote Config:', error);
-      }
-    };
+    //     setSelectedRotationCubo(objectsArray.find(obj => obj.type === 'Cubo').rotation);
+    //     setSelectedRotationCone(objectsArray.find(obj => obj.type === 'Cone').rotation);
+    //     setSelectedRotationDodecaedro(objectsArray.find(obj => obj.type === 'Dodecaedro').rotation);
+    //     setColors({
+    //       Cubo: objectsArray.find(obj => obj.type === 'Cubo').color,
+    //       Cone: objectsArray.find(obj => obj.type === 'Cone').color,
+    //       Dodecaedro: objectsArray.find(obj => obj.type === 'Dodecaedro').color,
+    //     });
+    //   } catch (error) {
+    //     console.error('Erro ao buscar o Remote Config:', error);
+    //   }
+    // };
   
-    fetchRemoteConfig();
+    // fetchRemoteConfig();
   }, []);
   
-  const handleChangeColor = (forma, color) => {
-    setColors((prevColors) => ({ ...prevColors, [forma]: color }));
-  };
+  // const handleChangeColor = (forma, color) => {
+  //   setColors((prevColors) => ({ ...prevColors, [forma]: color }));
+  // };
 
-  const handleChangeRotationCubo = (rotation) => {
-    setSelectedRotationCubo(rotation);
-  };
+  // const handleChangeRotationCubo = (rotation) => {
+  //   setSelectedRotationCubo(rotation);
+  // };
 
-  const handleChangeRotationCone = (rotation) => {
-    setSelectedRotationCone(rotation);
-  };
+  // const handleChangeRotationCone = (rotation) => {
+  //   setSelectedRotationCone(rotation);
+  // };
 
-  const handleChangeRotationDodecaedro = (rotation) => {
-    setSelectedRotationDodecaedro(rotation);
-  };
+  // const handleChangeRotationDodecaedro = (rotation) => {
+  //   setSelectedRotationDodecaedro(rotation);
+  // };
 
   const salvarConfig = () => {
     remoteConfigFirebase.initializeApp(authenticated.firebaseConfig);
