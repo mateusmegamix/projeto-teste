@@ -1,0 +1,5 @@
+export * from './Alerta'
+export * from './Botao'
+export * from './EntradaTexto'
+export * from './Header'
+export * from './Objeto'
