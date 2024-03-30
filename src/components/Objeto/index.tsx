@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { View, StyleSheet } from 'react-native';
-import { auth, firebaseConfig } from '../../config/firebase';
-import { firebase as remoteConfigFirebase } from '@react-native-firebase/remote-config';
+import { auth } from '../../config/firebase';
 import appFirebase from '@react-native-firebase/app';
 import '@react-native-firebase/database';
 import * as S from './styles';

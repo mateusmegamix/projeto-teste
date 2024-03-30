@@ -3,12 +3,10 @@ import { Alert, Text, View } from 'react-native';
 import Header from '../../components/Header';
 import { Objeto } from '../../components/Objeto';
 import { auth } from '../../config/firebase';
-import { configPadrao } from '../../config/configPadrao';
 import * as S from './styles';
 
 export default function RenderScreen({ navigation }) {
 
-  const [rotate, setRotate] = useState(0)
   const usuario = auth.currentUser;
   const usuarioNome = usuario.email.match(/^[^@]*/)[0];
 
