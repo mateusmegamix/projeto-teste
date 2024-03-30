@@ -12,8 +12,8 @@ function Cubo({ props, rotation, color }) {
 
   return (
     <mesh {...props} 
-    scale={active ? 1 : 0.8}
-    position={[0, 2, 0]}
+    scale={active ? 1 : 1.3}
+    position={[0, 2, -2]}
     rotation={[rotation, 0, 0]}
     onClick={(event) => setActive(!active)}>
     <boxGeometry />
@@ -28,7 +28,7 @@ function Cone({ props, rotation, color }) {
   return (
     <mesh {...props} 
       scale={active ? 1 : 0.8}
-      position={[0, 0, 1]}
+      position={[0, 0, 0]}
       rotation={[rotation, 0, 0]}
       onClick={(event) => setActive(!active)}>
       <coneGeometry />
@@ -43,7 +43,7 @@ function Dodecaedro({ props,rotation, color }) {
   return (
     <mesh {...props} 
       scale={active ? 1 : 0.8}
-      position={[0, -2, 1]}
+      position={[0, -2, 0]}
       rotation={[rotation, 0, 0]}
       onClick={(event) => setActive(!active)}>
       <dodecahedronGeometry />
