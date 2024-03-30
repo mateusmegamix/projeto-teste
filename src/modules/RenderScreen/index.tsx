@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Alert } from 'react-native';
+import { Alert, Text, View } from 'react-native';
 import Header from '../../components/Header';
-import Objeto from '../../components/Objeto';
+import { Objeto } from '../../components/Objeto';
 import { auth } from '../../config/firebase';
 import { configPadrao } from '../../config/configPadrao';
 import * as S from './styles';
@@ -33,20 +33,12 @@ export default function RenderScreen({ navigation }) {
   }
 
   return (
-    <S.Container>
-      <Header logout={deslogar} navigation={navigation}/>
-      <S.Texto>Usuário: {usuarioNome}</S.Texto>
-
-      {/* { configPadrao.map((config) => {
-          return (
-            <Objeto 
-              key={config.objetoId}
-              forma={config.forma}
-              cor={config.cor}
-              rotacao={config.rotacao}
-              onChangeText={rotate => setRotate(rotate)}
-            />)
-        })} */}
-     </S.Container>
+    <View style={{flex: 1}}>
+      <S.Container>
+        <Header logout={deslogar} navigation={navigation} />
+        <S.Texto>Usuário: {usuarioNome}</S.Texto>
+      </S.Container>
+      <Objeto />
+    </View>
   );
 }

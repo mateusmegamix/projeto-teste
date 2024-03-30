@@ -127,17 +127,17 @@ const SettingsScreen = ({navigation}) => {
             <S.TouchableOption
               accessibilityLabel='vermelho'
               style={{ backgroundColor: '#FF0000' }}
-              onPress={() => handleChangeColor('Cubo', 'Vermelho')}
+              onPress={() => handleChangeColor('Cubo', 'red')}
             />
             <S.TouchableOption
               accessibilityLabel='amarelo'
               style={{ backgroundColor: '#FFFF00' }}
-              onPress={() => handleChangeColor('Cubo', 'Amarelo')}
+              onPress={() => handleChangeColor('Cubo', 'yellow')}
             />
             <S.TouchableOption
               accessibilityLabel='verde'
               style={{ backgroundColor: '#00FF00' }}
-              onPress={() => handleChangeColor('Cubo', 'Verde')}
+              onPress={() => handleChangeColor('Cubo', 'green')}
             />
           </S.ColorOptions>
         </S.OptionContainer>
@@ -161,17 +161,17 @@ const SettingsScreen = ({navigation}) => {
             <S.TouchableOption
             accessibilityLabel='vermelho'
               style={{ backgroundColor: '#FF0000' }}
-              onPress={() => handleChangeColor('Cone', 'Vermelho')}
+              onPress={() => handleChangeColor('Cone', 'red')}
             />
             <S.TouchableOption
               accessibilityLabel='amarelo'
               style={{ backgroundColor: '#FFFF00' }}
-              onPress={() => handleChangeColor('Cone', 'Amarelo')}
+              onPress={() => handleChangeColor('Cone', 'yellow')}
             />
             <S.TouchableOption
               accessibilityLabel='verde'
               style={{ backgroundColor: '#00FF00' }}
-              onPress={() => handleChangeColor('Cone', 'Verde')}
+              onPress={() => handleChangeColor('Cone', 'green')}
             />
           </S.ColorOptions>
         </S.OptionContainer>
@@ -195,17 +195,17 @@ const SettingsScreen = ({navigation}) => {
             <S.TouchableOption
               accessibilityLabel='vermelho'
               style={{ backgroundColor: '#FF0000' }}
-              onPress={() => handleChangeColor('Dodecaedro', 'Vermelho')}
+              onPress={() => handleChangeColor('Dodecaedro', 'red')}
             />
             <S.TouchableOption
               accessibilityLabel='amarelo'
               style={{ backgroundColor: '#FFFF00' }}
-              onPress={() => handleChangeColor('Dodecaedro', 'Amarelo')}
+              onPress={() => handleChangeColor('Dodecaedro', 'yellow')}
             />
             <S.TouchableOption
               accessibilityLabel='verde'
               style={{ backgroundColor: '#00FF00' }}
-              onPress={() => handleChangeColor('Dodecaedro', 'Verde')}
+              onPress={() => handleChangeColor('Dodecaedro', 'green')}
             />
           </S.ColorOptions>
         </S.OptionContainer>
