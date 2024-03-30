@@ -82,7 +82,7 @@ export function Objeto() {
     <S.Container>
       <Canvas style={{ flex: 1 }} resizeMode="contain">
         <ambientLight />
-        <pointLight position={[0, 0, 0]} />
+        <pointLight position={[1, 0, 1]} />
         {objects.map((object, index) => {
           let position;
           switch (object.type) {
